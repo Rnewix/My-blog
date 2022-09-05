@@ -1,0 +1,37 @@
+{% load static %}   <!-- Importar los estilos CSS de carpeta static--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %} </title>
+</head>
+<body>
+    
+    <header>
+        {% include "index/header.html" %} 
+    </header> 
+
+    <nav>
+        {% include "index/navigation_bar.html" %}
+    </nav>
+
+    <section> 
+
+        {% block content %} 
+        {% endblock %}
+
+    </section>
+
+    <footer>
+        {% include "index/footer.html" %}
+    </footer> 
+    
+</body>
+
+</html>
+
+
+
