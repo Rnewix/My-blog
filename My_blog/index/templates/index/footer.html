@@ -3,10 +3,10 @@
 
     <body>
         <ul>
-            <li>Home</li>
-            <li>rojects/Portfolio</li>
-            <li>About me</li>
-            <li>Contact</li>
+            <li><a href= "{% url 'index:home' %}" >Home</a></li>
+            <li><a href= "{% url 'my_projects:my_projects' %}">Projects/Portfolio</a></li>
+            <li><a href= "{% url 'about_us:about_us' %}">About me</a></li>
+            <li><a href= "{% url 'contact:contact' %}">Contact</a></li>
         </ul>
         <br>
         <p>social networks</p>
