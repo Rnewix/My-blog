@@ -9,15 +9,9 @@
 <p>
 <p>Thanks for bein interested in this Web Page, i'll be glad to being in contact with you. <br> 
     Any comment or contact for job please fill the form. As soon as possible i will contact to you back.</p>
+<br>
 <p>
-
-    <form action="" method="POST"> 
-        {% csrf_token%}                                                         
-            <table>
-                {{formulario.as_table}}                                                        
-            </table>
-            <input type="submit" value="Enviar">
-        </form>
+    <b>Your message was sendend correctly, wait for the answer soon</b>
 </p>
-
+<p> Regesar a <a href= "{% url 'index:home' %}">Home</a></p>
 {% endblock %} 

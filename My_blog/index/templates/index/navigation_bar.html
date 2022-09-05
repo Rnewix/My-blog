@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
 
+<style>
+    #navbar{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-transform: uppercase;
+    }
+
+    #navbar li{
+        display: inline;
+        margin: 0 20px
+
+    }
+
+</style>
+
     <body>
-        <ul>
+        <ul id="navbar">
             <li><a href= "{% url 'index:home' %}" >Home</a></li>
             <li><a href= "{% url 'my_projects:my_projects' %}">Projects/Portfolio</a></li>
             <li><a href= "{% url 'about_us:about_us' %}">About me</a></li>
