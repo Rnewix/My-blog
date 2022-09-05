@@ -5,18 +5,37 @@
 
 
 {% block content %} 
+<style>
+    #aboutmetitle{
+        font-size:xx-large
+    }
 
-<h2> About me</h2>
-<p>
-<b>Name:</b>Roca Dono Carlos Humberto<br>
-<b>Age:</b>33 years.<br><br>
+   .aboutme{
+    padding-left: 15px;
+   } 
+</style>
 
-I am a proactive person who is passionate about technology, with a desire to develop a long career in web development. Accustomed to teamwork, self-learning and continuous study.
-</p>
 <br>
-<p>
-    <b>Background</b><br><br>
-    Actual technologies and Knowledges:
+<h3 id='aboutmetitle'> About me</h3>
+
+<br>
+
+<section class="aboutme">
+    <p><b>Name:</b> Roca Dono Carlos Humberto.<br></p>
+    <p><b>Age:</b> 33 years.</p>
+
+    <br>
+
+    <p>I am a proactive person who is passionate about technology, with a desire to develop a long career in web development. 
+        Used to work in team, self-learning and continuous study.
+    </p>
+</section>
+    <br>
+<p><h3>Background</h3></p>
+<section class="aboutme">
+    
+    <br>
+    <p>Actual technologies and Knowledges:</p>
     <ul>                         
         <li>Python</li>
         <li>Django</li> 
@@ -24,24 +43,25 @@ I am a proactive person who is passionate about technology, with a desire to dev
         <li>SQL Databases/ MySQL</li>
         <li>Html</li>              
     </ul>
-    Technologies in course
+    <br>
+    <p>Technologies in course</p>
     <ul>                         
         <li>FastAPI</li>                
     </ul>
-    Main plataform: 
+    <br>
+    </p>Main plataform:</p> 
     <ul>                         
         <li>Linux/ubuntu environment</li>                
     </ul>
-
-    Language:
+    <br>
+    </p>Language:</p>
     <ul>                         
         <li>English: TOEIC</li>    
         <li>Japanese: N3</li>    
         <li>Spanish: Native level</li>                
     </ul>
-    
-</p>
 
+</section>
 {% endblock %} 
 
 

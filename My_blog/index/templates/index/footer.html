@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html>
+{% load static %}  
+<link rel="stylesheet" href="{% static 'index/style.css' %}" />
 
-    <body>
-        <br>
-        <hr>
-        <br>
-        <ul>
-            <li><a href= "{% url 'index:home' %}">Home</a></li>
-            <li><a href= "{% url 'my_projects:my_projects' %}">Projects/Portfolio</a></li>
-            <li><a href= "{% url 'about_us:about_us' %}">About me</a></li>
-            <li><a href= "{% url 'contact:contact' %}">Contact</a></li>
-        </ul>
-        <br>
-        <p>Social networks</p>
-        <ul>
-            <li>Facebook</li>
-            <li>Line</li>
-            <li>Whatsapp</li>
-            <li><a target="_blank" href= "https://github.com/Rnewix">Github</a></li>
-        </ul>
-        <br>
-        <p>2022. All rights reserved</p>
-    </body>
+<section id="footer">
+    <br>
+    <hr>
+    <br>
+    <section class="columncontenerfooter">
+        <div class="columnfooter">    
+            <p>SOCIAL NETWORKS</p>
+            <p><a target="_blank" href= "https://www.facebook.com/carlos.roca.9277/">Facebook</a></p>
+            <p>Line</p>
+            <p>Whatsapp</p>
+            <p><a target="_blank" href= "https://github.com/Rnewix">Github</a></p>
+        </div>
+        <div class="columnfooter">
+            <p>MENU</p>
+            <p><a href= "{% url 'index:home' %}">Home</a></p>
+            <p><a href= "{% url 'my_projects:my_projects' %}">Portfolio</a></p>
+            <p><a href= "{% url 'about_us:about_us' %}">About me</a></p>
+            <p><a href= "{% url 'contact:contact' %}">Contact</a></p>
+        </div>
+    </section>
+    <br>
+    <p id="copyright">&copy;2022. All rights reserved</p>
+</section>
 
-</html>

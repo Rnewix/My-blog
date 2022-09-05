@@ -1,23 +1,35 @@
 {% extends "index/base.html" %}
-                
+{% load static %}  
+<link rel="stylesheet" href="{% static 'index/style.css' %}" />
+
 {% block title %} Contact {% endblock %}  
 
 
 
 {% block content %} 
-<h2>Contact</h2>
-<p>
-<p>Thanks for bein interested in this Web Page, i'll be glad to being in contact with you. <br> 
-    Any comment or contact for job please fill the form. As soon as possible i will contact to you back.</p>
-<p>
+<style>
+    #contacttitle{
+        font-size: xx-large;
+    }
 
+    #contactform{
+        padding-right: 20%
+        }
+</style>
+
+<br>
+<h3 id="contacttitle">Contact</h3>
+<br>
+<p>
+<p>Thanks for being interested in this Web Page, i'll be glad to being in contact with you. <br> 
+    Any comment or contact for job please fill the form. As soon as possible i will contact you back.</p>
+<br>
+<section id="contactform">
     <form action="" method="POST"> 
         {% csrf_token%}                                                         
-            <table>
-                {{formulario.as_table}}                                                        
-            </table>
-            <input type="submit" value="Enviar">
-        </form>
-</p>
+        {{formulario.as_p}}
+        <input type="submit" value="Enviar" class="btn btn-primary">
+    </form>
+</section>
 
 {% endblock %} 
