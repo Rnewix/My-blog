@@ -1,4 +1,3 @@
-from email.message import Message
 from django.shortcuts import render
 from .forms import ConctactForm
 from django.http import HttpResponse
@@ -18,7 +17,7 @@ def contact(request):
             data_valid= formdata.cleaned_data                              
             
             subject = data_valid["matter"]                                  
-            message = data_valid["message"]
+            message = data_valid["message"] + '/n Sended by: '+ data_valid['email']
             email_from = settings.EMAIL_HOST_USER                                   
             recipient_list = ['rocaedono@gmail.com'] 
             send_mail(subject, message, email_from, recipient_list)
@@ -34,13 +33,3 @@ def contact(request):
     
     
 
-def contact_send_mail(request):                                                 
-    subject = request.POST["matter"]                                  
-    message = request.POST["message"]
-    email_from = settings.EMAIL_HOST_USER                                   
-    recipient_list = ['rocaedono@gmail.com']                            
-
-    send_mail(subject,                                              
-                message, 
-                email_from, 
-                recipient_list)
