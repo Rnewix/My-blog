@@ -1,10 +1,6 @@
 
 /* --- General CSS----------------------------------------- */
 
-body {
-    background-color: rgba(248, 248, 248, 0.034);
-}
-
 
 /* --- Header----------------------------------------- */
 
@@ -15,12 +11,7 @@ body {
 /* --- Footer ----------------------------------------- */
 
 
-.columnfooter{
-    width: 50%;
-    margin: auto;
-    float: right;
-    text-align: center;
-}
+
 
 #copyright{
     width: 100%;

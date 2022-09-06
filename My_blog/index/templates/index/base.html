@@ -1,5 +1,5 @@
 {% load static %}  
-<link rel="stylesheet" href="{% static 'index/style.css' %}" />
+<link rel="stylesheet" href='/static/index/style.css' />
 
 <!doctype html>
 <html lang="en">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body id="bodium">
 
     <header>
         <!-- Navbar -->
@@ -55,49 +55,62 @@
         <!-- Navbar -->
     
         <!-- Background image -->
-        <div
-            class="p-5 text-center bg-image"
-            style="background-image: url('/static/index/images/background_title.jpg');
-                height: 400px;
-                margin-top: 58px;
-                margin-bottom: 20px;
-            "
-        >
-            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-                <div class="d-flex justify-content-center align-items-center h-100">
-                    <div class="text-white">
-                        <h1 class="mb-3">My first web page</h1>
-                        <h3 class="mb-3">Roca Carlos Backend developer</h3>
+        
+            <div
+                class="p-5 text-center bg-image"
+                style="background-image: url('/static/index/images/background_title.jpg');
+                    height: 400px;
+                    margin-top: 58px;
+                    margin-bottom: 20px;
+                "
+            >
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+                    <div class="d-flex justify-content-center align-items-center h-100">
+                        <div class="text-white">
+                            <h1 class="px-3">My first web page</h1>
+                            <p class="lead">Roca Carlos Backend developer</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
         <!-- Background image -->
     </header>
     
-    <main>
+    <main class="container px-3">
         {% block content %} 
         {% endblock %}
     </main>
-    <footer>
-        <div class="card">
-            <div class="card-body text-muted">
-                <div class="columnfooter">   
-                    <h4 class="card-title">SOCIAL NETWORKS</h4> 
-                    <p><a target="_blank" href= "https://www.facebook.com/carlos.roca.9277/" class="card-link">Facebook</a></p>
-                    <p class="card-link">Line</p>
-                    <p class="card-link">Whatsapp</p>
-                    <p><a target="_blank" href= "https://github.com/Rnewix" class="card-link">Github</a></p>
-                </div>
-                <div class="columnfooter">
-                    <h4 class="card-title">MENU</h4>
-                    <p><a href= "{% url 'index:home' %}" class="card-link">Home</a></p>
-                    <p><a href= "{% url 'my_projects:my_projects' %}"class="card-link">Portfolio</a></p>
-                    <p><a href= "{% url 'about_us:about_us' %}" class="card-link">About me</a></p>
-                    <p><a href= "{% url 'contact:contact' %}" class="card-link">Contact</a></p>
-                </div>
-            </div>
-            <div class="card-body text-muted" id="copyright">&copy;2022. All rights reserved</div>
+    <br>
+    <hr>
+    <br>
+    <footer class="container px-3">
+        <div class="row">
+          <div class="col-3 col-md"></div>
+          <div class="col-3 col-md">
+            <h5>Menu</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" href="{% url 'index:home' %}">Home</a></li>
+              <li><a class="link-secondary" href="{% url 'my_projects:my_projects' %}">Portfolio</a></li>
+              <li><a class="link-secondary" href="{% url 'about_us:about_us' %}">About me</a></li>
+              <li><a class="link-secondary" href="{% url 'contact:contact' %}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-2 col-md"></div>
+          <div class="col-3 col-md">
+            <h5>Social Networks</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="link-secondary" target="_blank" href= "https://www.facebook.com/carlos.roca.9277/">Facebook</a></li>
+              <li><a class="link-secondary" href="#">Line</a></li>
+              <li><a class="link-secondary" href="#">Whatsapp</a></li>
+              <li><a class="link-secondary" target="_blank" href= "https://github.com/Rnewix">Github</a></li>
+            </ul>
+          </div>
+          <div class="col-1 col-md"></div>
+        </div>
+        <br>
+        <div class="col-12 col-md">
+            <small class="d-block px-3 text-muted" id="copyright">&copy;2022. All rights reserved</small>
         </div>
     </footer>
 
@@ -113,4 +126,5 @@
 </body>
 
 </html>
+
 
