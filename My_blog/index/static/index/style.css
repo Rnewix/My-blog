@@ -1,51 +1,19 @@
 
 /* --- General CSS----------------------------------------- */
 
-body {background-color: rgba(248, 248, 248, 0.034);}
-
-nav {background-color: rgba(53, 73, 78, 0.712);}
-
-a:link, a:visited, a:active {
-    text-decoration:none;
+body {
+    background-color: rgba(248, 248, 248, 0.034);
 }
-a { color: #8b8b8b; } 
-a { color: #000000; }
 
 
 /* --- Header----------------------------------------- */
 
-#header{
-    margin-top: 5%;
-}
-
 
 /* --- Nav Bar----------------------------------------- */
-
-#navbar{
-    width: 100%;
-    margin: auto;
-    margin-top: 30px; 
-    margin-bottom: 30px;
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    list-style: none;
-    text-transform: uppercase;
-    text-align: justify;
-}
-
-#navbar li{
-    display: inline;
-    padding-left: 5%;
-}
 
 
 /* --- Footer ----------------------------------------- */
 
-.columncontenerfooter{
-    width: 100%;
-    margin: auto;
-    margin-bottom: 15px;
-}
 
 .columnfooter{
     width: 50%;
@@ -54,15 +22,9 @@ a { color: #000000; }
     text-align: center;
 }
 
-
 #copyright{
+    width: 100%;
     text-align: center;
-    background-color: rgb(133, 145, 145);
-    margin-top: 170px;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
-
-
 /* --- Contact form ---------------------------------------- */
 
