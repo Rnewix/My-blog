@@ -14,7 +14,7 @@ def contact(request):
     if request.method=="POST":                                                
         formdata= ConctactForm(request.POST)                                              
         if formdata.is_valid():                                                      
-            data_valid= formdata.cleaned_data                              
+            data_valid= formdata.cleaned_data                             
             
             subject = data_valid["matter"]                                  
             message = data_valid["message"] + '/n Sended by: '+ data_valid['email']
