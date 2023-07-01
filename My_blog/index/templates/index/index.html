@@ -42,35 +42,22 @@
   <body class="d-flex h-100 text-center text-white bg-dark">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="mb-auto">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="navbar-main-header">
           <div class="container-fluid">
-              <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-mdb-toggle="collapse"
-                  data-mdb-target="#navbarExample01"
-                  aria-controls="navbarExample01"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-              >
-                  <i class="fas fa-bars"></i>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarExample01">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item active">
-                          <a class="nav-link" aria-current="page" href="{% url 'index:home' %}">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'my_projects:my_projects' %}">Portfolio</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'about_us:about_us' %}">About me</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'contact:contact' %}">Contact</a>
-                      </li>
-                  </ul>
-              </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active" id="navbar-home">
+                  <a class="nav-link" aria-current="page" href="{% url 'index:home' %}">Home</a>
+              </li>
+              <li class="nav-item" id="navbar-portfolio">
+                  <a class="nav-link" href="{% url 'my_projects:my_projects' %}">Portfolio</a>
+              </li>
+              <li class="nav-item" id="navbar-Aboutme">
+                  <a class="nav-link" href="{% url 'about_us:about_us' %}">About me</a>
+              </li>
+              <li class="nav-item" id="navbar-Contact">
+                  <a class="nav-link" href="{% url 'contact:contact' %}">Contact</a>
+              </li>
+            </ul>
           </div>
         </nav>
       </header>
